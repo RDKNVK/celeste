@@ -1,0 +1,38 @@
+@body-color: white;
+@main-beige: #ebe4de;
+@main-blue: #44afc2;
+
+@left-column: 700px;
+@right-column: 240px;
+
+.temp (@color){
+	border: 1px dashed @color;
+}
+
+body {
+	background-color: @body-color;
+}
+#main-wrapper {
+	width: 960px;
+	margin: 0 auto;
+
+	.temp(green);
+}
+
+#content {
+	width: @left-column;
+}
+header {
+	height: 230px;
+	width: 100%;
+
+	.temp(gray);
+}
+body > aside {
+	float: right;
+	width: @right-column;
+
+	.temp(blue);
+}
+
+
