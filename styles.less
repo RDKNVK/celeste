@@ -5,6 +5,20 @@
 @left-column: 700px;
 @right-column: 240px;
 
+@footer-column: 220px;
+@contact-form: 240px;
+
+// reset
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+header > .corner-links {
+	background-color: @main-blue;
+	display: block;
+	margin-left: 20px;
+}
 .temp (@color){
 	border: 1px dashed @color;
 }
@@ -19,7 +33,7 @@ body {
 	.temp(green);
 }
 
-#content {
+#main {
 	width: @left-column;
 }
 header {
