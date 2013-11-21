@@ -100,18 +100,24 @@ header .mini-nav ul li:last-child:after {
 	display: inline-block;
 	
 	height: 41px;
-	border-right: 5px solid @main-gray;
-}
+	border-right: 5px solid lighten(@main-gray, 20%);
 
+}
+#main-wrapper nav a:last-child  {
+	border: none;
+}
+#main-wrapper nav a:not(:first-child) {
+	margin-left: 20px;
+}
 #main-wrapper nav dt{
 	color: @main-blue;
+	font-size: 16px;
 	font-weight: bold;
-	font-size: 17px;
-
+	font-family: Tahoma, sans-serif;
 }
 #main-wrapper nav dd{
 	color: @main-gray;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 .temp (@color){
