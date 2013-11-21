@@ -9,6 +9,8 @@
 @footer-column: 220px;
 @contact-form: 240px;
 
+@article-footer-width: 120px;
+
 // reset
 * {
 	margin: 0;
@@ -21,6 +23,12 @@ body {
 	background-color: @body-color;
 }
 // header
+header {
+	height: 230px;
+	width: 100%;
+
+	//.temp(gray);
+}
 header a {
 	text-decoration: none;
 	color: #aaa;
@@ -57,7 +65,6 @@ header .mini-nav form input {
 	width: 240px;
 	height: 30px;
 	background-color: @main-beige;
-
 }
 header .mini-nav form button {
 	//background-color: @main-beige;
@@ -91,8 +98,9 @@ header .mini-nav ul li:last-child:after {
 
 #main-wrapper nav {
 	width: @left-column;
+	height: 41px;
 
-	.temp (navy);
+	//.temp (navy);
 }
 #main-wrapper nav a {
 	text-decoration: none;
@@ -101,19 +109,24 @@ header .mini-nav ul li:last-child:after {
 	
 	height: 41px;
 	border-right: 5px solid lighten(@main-gray, 20%);
+	padding:0 17px 0 0;
 
-}
-#main-wrapper nav a:last-child  {
-	border: none;
 }
 #main-wrapper nav a:not(:first-child) {
 	margin-left: 20px;
+	
 }
+#main-wrapper nav a:last-child  {
+	border: none;
+	margin-right: 0;
+	padding: 0;
+}
+
 #main-wrapper nav dt{
 	color: @main-blue;
 	font-size: 16px;
 	font-weight: bold;
-	font-family: Tahoma, sans-serif;
+	font-family: "Oswald", sans-serif;
 }
 #main-wrapper nav dd{
 	color: @main-gray;
@@ -130,16 +143,22 @@ header .mini-nav ul li:last-child:after {
 
 	.temp(green);
 }
-
+/* main */
 #main {
 	width: @left-column;
+	background-color: @main-beige;
+	margin: 31px 0 0 0;
 }
-header {
-	height: 230px;
-	width: 100%;
+#main > article footer {
+	height: 100%;
+	width: @article-footer-width;
+	float: left;
 
-	.temp(gray);
 }
+#main > article .article-content {
+	float: right;
+}
+/* side panel */
 body > aside {
 	float: right;
 	width: @right-column;
