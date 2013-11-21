@@ -1,3 +1,7 @@
+.temp (@color){
+	border: 1px dashed @color;
+}
+
 @body-color: white;
 @main-beige: #ebe4de;
 @main-blue: #44afc2;
@@ -22,78 +26,12 @@ body {
 	font-family: Tahoma, Arial;
 	background-color: @body-color;
 }
-// header
-header {
-	height: 230px;
-	width: 100%;
 
-	//.temp(gray);
-}
-header a {
-	text-decoration: none;
-	color: #aaa;
-}
-header a img {
-	display: block;
+#main-wrapper {
+	width: 960px;
 	margin: 0 auto;
-	position:relative;
-	top: 70px;
-}
 
-header a:hover {
-	color: @main-blue;
-}
-header .corner-links {
-	background-color: @main-blue;
-	display: block;
-	margin-left: 20px;
-	width: 40px;
-	height: 99px;
-	float: right;
-}
-header .mini-nav {
-	margin-top: 31px;
-	float: right;
-	height: 55px;
-	position: relative;
-}
-
-header .mini-nav form {
-	float: right;
-}
-header .mini-nav form input {
-	width: 240px;
-	height: 30px;
-	background-color: @main-beige;
-}
-header .mini-nav form button {
-	//background-color: @main-beige;
-	background: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-header .mini-nav ul {
-	width: 350px;
-	position: relative;
-	top: 15px;
-	text-transform: uppercase;
-	font-size: 10px;
-	clear: both;
-	text-align: right;
-}
-header .mini-nav ul li {
-	display: inline-block;
-}
-header .mini-nav ul li:after {
-	content: '|';
-	margin: 0 11px 0 12px;
-	color: darken(@main-beige, 15%);
-	font-weight: bold;
-}
-header .mini-nav ul li:last-child:after {
-	margin: 0;
-	content: '';
+	.temp(green);
 }
 
 #main-wrapper nav {
@@ -133,37 +71,135 @@ header .mini-nav ul li:last-child:after {
 	font-size: 10px;
 }
 
-.temp (@color){
-	border: 1px dashed @color;
-}
 
-#main-wrapper {
-	width: 960px;
+
+
+// header
+#main-wrapper header {
+	height: 230px;
+	width: 100%;
+
+	//.temp(gray);
+}
+#main-wrapper header a {
+	text-decoration: none;
+	color: #aaa;
+}
+#main-wrapper header a img {
+	display: block;
 	margin: 0 auto;
-
-	.temp(green);
+	position:relative;
+	top: 70px;
 }
+
+#main-wrapper header a:hover {
+	color: @main-blue;
+}
+#main-wrapper header .corner-links {
+	background-color: @main-blue;
+	display: block;
+	margin-left: 20px;
+	width: 40px;
+	height: 99px;
+	float: right;
+}
+#main-wrapper header .mini-nav {
+	margin-top: 31px;
+	float: right;
+	height: 55px;
+	position: relative;
+}
+
+#main-wrapper header .mini-nav form {
+	float: right;
+}
+#main-wrapper header .mini-nav form input {
+	width: 240px;
+	height: 30px;
+	background-color: @main-beige;
+}
+#main-wrapper header .mini-nav form button {
+	//background-color: @main-beige;
+	background: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#main-wrapper header .mini-nav ul {
+	width: 350px;
+	position: relative;
+	top: 15px;
+	text-transform: uppercase;
+	font-size: 10px;
+	clear: both;
+	text-align: right;
+}
+#main-wrapper header .mini-nav ul li {
+	display: inline-block;
+}
+#main-wrapper header .mini-nav ul li:after {
+	content: '|';
+	margin: 0 11px 0 12px;
+	color: darken(@main-beige, 15%);
+	font-weight: bold;
+}
+#main-wrapper header .mini-nav ul li:last-child:after {
+	margin: 0;
+	content: '';
+}
+
+
 /* main */
 #main {
 	width: @left-column;
 	background-color: @main-beige;
 	margin: 31px 0 0 0;
+	display: inline-block;
 }
 #main > article footer {
 	height: 100%;
 	width: @article-footer-width;
 	float: left;
-
+}
+#main > article footer > section,
+#main > article footer > div,
+#main > article footer > span {
+	text-align: right;
 }
 #main > article .article-content {
 	float: right;
+	width: @left-column - @article-footer-width;
 }
+
 /* side panel */
-body > aside {
+#main-wrapper > aside {
 	float: right;
 	width: @right-column;
-
+	display: inline-block;
 	.temp(blue);
 }
+/* page footer */
+#main-wrapper > footer {
 
-
+}
+#main-wrapper > footer section{
+	width: @footer-column;
+	display: inline-block;
+}
+#main-wrapper > footer #footer-stamp{
+	width: @footer-column;
+}
+// credit: http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
