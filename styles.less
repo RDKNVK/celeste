@@ -1,6 +1,7 @@
 @body-color: white;
 @main-beige: #ebe4de;
 @main-blue: #44afc2;
+@main-gray: #aaacaf;
 
 @left-column: 700px;
 @right-column: 240px;
@@ -12,10 +13,12 @@
 * {
 	margin: 0;
 	padding: 0;
+	border: none;
 	list-style-type: none;
 }
 body {
 	font-family: Tahoma, Arial;
+	background-color: @body-color;
 }
 // header
 header a {
@@ -25,7 +28,8 @@ header a {
 header a img {
 	display: block;
 	margin: 0 auto;
-
+	position:relative;
+	top: 70px;
 }
 
 header a:hover {
@@ -39,7 +43,6 @@ header .corner-links {
 	height: 99px;
 	float: right;
 }
-
 header .mini-nav {
 	margin-top: 31px;
 	float: right;
@@ -54,13 +57,11 @@ header .mini-nav form input {
 	width: 240px;
 	height: 30px;
 	background-color: @main-beige;
-	border: none;
 
 }
 header .mini-nav form button {
 	//background-color: @main-beige;
 	background: none;
-	border: none;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -88,14 +89,35 @@ header .mini-nav ul li:last-child:after {
 	content: '';
 }
 
+#main-wrapper nav {
+	width: @left-column;
+
+	.temp (navy);
+}
+#main-wrapper nav a {
+	text-decoration: none;
+	color: none;
+	display: inline-block;
+	
+	height: 41px;
+	border-right: 5px solid @main-gray;
+}
+
+#main-wrapper nav dt{
+	color: @main-blue;
+	font-weight: bold;
+	font-size: 17px;
+
+}
+#main-wrapper nav dd{
+	color: @main-gray;
+	font-size: 12px;
+}
 
 .temp (@color){
 	border: 1px dashed @color;
 }
 
-body {
-	background-color: @body-color;
-}
 #main-wrapper {
 	width: 960px;
 	margin: 0 auto;
