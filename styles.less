@@ -14,11 +14,81 @@
 	padding: 0;
 	list-style-type: none;
 }
-header > .corner-links {
+body {
+	font-family: Tahoma, Arial;
+}
+// header
+header a {
+	text-decoration: none;
+	color: #aaa;
+}
+header a img {
+	display: block;
+	margin: 0 auto;
+
+}
+
+header a:hover {
+	color: @main-blue;
+}
+header .corner-links {
 	background-color: @main-blue;
 	display: block;
 	margin-left: 20px;
+	width: 40px;
+	height: 99px;
+	float: right;
 }
+
+header .mini-nav {
+	margin-top: 31px;
+	float: right;
+	height: 55px;
+	position: relative;
+}
+
+header .mini-nav form {
+	float: right;
+}
+header .mini-nav form input {
+	width: 240px;
+	height: 30px;
+	background-color: @main-beige;
+	border: none;
+
+}
+header .mini-nav form button {
+	//background-color: @main-beige;
+	background: none;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+header .mini-nav ul {
+	width: 350px;
+	position: relative;
+	top: 15px;
+	text-transform: uppercase;
+	font-size: 10px;
+	clear: both;
+	text-align: right;
+}
+header .mini-nav ul li {
+	display: inline-block;
+}
+header .mini-nav ul li:after {
+	content: '|';
+	margin: 0 11px 0 12px;
+	color: darken(@main-beige, 15%);
+	font-weight: bold;
+}
+header .mini-nav ul li:last-child:after {
+	margin: 0;
+	content: '';
+}
+
+
 .temp (@color){
 	border: 1px dashed @color;
 }
