@@ -16,12 +16,13 @@
 
 @article-footer-width: 120px;
 
-.blue-header {
-	color: @main-blue;
+.blue-header (@c: @main-blue) {
+	color: darken(@c, 10%);
 	font-size: 16px;
 	font-weight: bold;
 	font-family: "Oswald", sans-serif;
 }
+
 // reset
 * {
 	margin: 0;
@@ -32,6 +33,7 @@
 }
 body {
 	font-family: Tahoma, Arial;
+	font-size: 12px;
 	background-color: @body-color;
 }
 
@@ -40,118 +42,6 @@ body {
 	margin: 0 auto;
 
 	.temp(green);
-}
-
-@import 'header.less';
-
-
-#main-wrapper nav {
-	width: @left-column;
-	height: 41px;
-
-	//.temp (navy);
-}
-#main-wrapper nav a {
-	text-decoration: none;
-	color: none;
-	display: inline-block;
-	
-	height: 41px;
-	border-right: 5px solid lighten(@main-gray, 20%);
-	padding:0 17px 0 0;
-
-}
-#main-wrapper nav a:not(:first-child) {
-	margin-left: 20px;
-	
-}
-#main-wrapper nav a:last-child  {
-	border: none;
-	margin-right: 0;
-	padding: 0;
-}
-
-#main-wrapper nav dt{
-	.blue-header;
-}
-#main-wrapper nav dd{
-	color: @main-gray;
-	font-size: 10px;
-}
-
-
-
-
-
-/* main */
-#main {
-	width: @left-column;
-	background-color: @main-beige;
-	margin: 31px 0 0 0;
-	display: inline-block;
-}
-#main > article footer {
-	height: 100%;
-	width: @article-footer-width;
-	float: left;
-}
-#main > article footer > section,
-#main > article footer > div,
-#main > article footer > span {
-	text-align: right;
-}
-#main > article .article-content {
-	float: right;
-	width: @left-column - @article-footer-width;
-}
-
-/* side panel */
-#main-wrapper > aside {
-	float: right;
-	width: @right-column;
-	display: inline-block;
-	.temp(white);
-}
-#main-wrapper > aside section h1 {
-	.blue-header;
-}
-#main-wrapper > aside form{
-	background-color: @main-blue;
-	width: 240px;
-	height: 31px;
-
-}
-#main-wrapper > aside form input{
-	display: inline-block;
-	background-color: #eee;
-	width: 195px;
-	height: 21px;
-	margin: 5px 0 0 4px;
-}
-#main-wrapper > aside form button{
-	display: inline-block;
-	margin: 0px 0 0 0px;
-}
-/* page footer */
-body > footer {
-	background-image: url('img/footer-bg.jpg');
-	background-repeat: repeat-x;
-	position: relative;
-	bottom: 46px;
-	padding-top: 46px;
-	z-index: -1;
-}
-body > footer .footer-wrapper {
-	width: @pagewidth;
-	margin: 0 auto;
-
-}
-body > footer .footer-wrapper section{
-	width: @footer-column;
-	display: inline-block;
-}
-body > footer .footer-wrapper #footer-stamp{
-	width: @footer-column;
 }
 
 // credit: http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
@@ -168,3 +58,9 @@ body > footer .footer-wrapper #footer-stamp{
 .clearfix {
     zoom:1;
 }
+
+@import 'header.less';
+@import "footer.less";
+@import "sidebar.less";
+@import "main.less";
+@import "nav.less";

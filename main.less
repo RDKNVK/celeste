@@ -1,0 +1,27 @@
+/* main */
+#main {
+	width: @left-column;
+	background-color: @main-beige;
+	margin: 31px 0 0 0;
+	display: inline-block;
+}
+
+#main > article footer > section,
+#main > article footer > div,
+#main > article footer > span {
+	text-align: right;
+}
+
+#main > article footer {
+	height: 100%;
+	width: @article-footer-width;
+	float: left;
+}
+#main > article footer .article-date {
+	.blue-header;
+}
+
+#main > article .article-content {
+	float: right;
+	width: @left-column - @article-footer-width;
+}
