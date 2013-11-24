@@ -6,7 +6,9 @@
 	display: inline-block;
 	padding-top: 23px;
 }
-
+#main > article {
+	margin-bottom: 36px;
+}
 #main > article footer > section,
 #main > article footer > div,
 #main > article footer > span {
@@ -18,7 +20,6 @@
 	width: @article-footer-width;
 	float: left;
 
-	.bbox;
 	padding-right: 15px;
 	margin-top: 57px;
 }
@@ -29,7 +30,6 @@
 #main > article .article-content {
 	float: right;
 	width: @left-column - @article-footer-width;
-	.bbox;
 	padding-left: 22px;
 	border-left: 1px solid darken(@main-beige, 10%);
 	position: relative;
@@ -47,11 +47,32 @@
 #main > article .article-content h1 {
 	font-size: 20px;
 }
-#main > article .comments {
+
+#main > .comments {
 	border-top: 1px solid darken(@main-beige, 10%);
 	position: relative;
+	padding-top: 35px;
+
+	h1 {
+		.blue-header;		
+	}
+
+	article.comment {
+		img, .comment-content, footer {
+			display: inline-block;
+		}
+
+		background-color: lighten(@main-beige, 4%);
+	}
+
+	.comment.level-2 {
+		background-color: inherit;
+
+	}
+
+
 }
-#main > article .comments:before {
+#main > .comments:before {
 	content: ' ';
 	top: 0;
 	left: 0;
@@ -61,6 +82,19 @@
 	position: absolute;
 	border-top: 1px solid lighten(@main-beige, 10%);
 }
-#main > article .comments h1{
-	.blue-header;
+
+#main #insert-comment {
+	border-top: 1px solid darken(@main-beige, 10%);
+	position: relative;
+
+}
+#main #insert-comment:before {
+	content: ' ';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	position: absolute;
+	border-top: 1px solid lighten(@main-beige, 10%);
 }
