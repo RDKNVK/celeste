@@ -7,6 +7,7 @@
 @main-blue: #44afc2;
 @main-gray: #aaacaf;
 
+@pagewidth: 960px;
 @left-column: 700px;
 @right-column: 240px;
 
@@ -15,12 +16,19 @@
 
 @article-footer-width: 120px;
 
+.blue-header {
+	color: @main-blue;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Oswald", sans-serif;
+}
 // reset
 * {
 	margin: 0;
 	padding: 0;
 	border: none;
 	list-style-type: none;
+	background: none;
 }
 body {
 	font-family: Tahoma, Arial;
@@ -28,11 +36,14 @@ body {
 }
 
 #main-wrapper {
-	width: 960px;
+	width: @pagewidth;
 	margin: 0 auto;
 
 	.temp(green);
 }
+
+@import 'header.less';
+
 
 #main-wrapper nav {
 	width: @left-column;
@@ -61,10 +72,7 @@ body {
 }
 
 #main-wrapper nav dt{
-	color: @main-blue;
-	font-size: 16px;
-	font-weight: bold;
-	font-family: "Oswald", sans-serif;
+	.blue-header;
 }
 #main-wrapper nav dd{
 	color: @main-gray;
@@ -73,80 +81,6 @@ body {
 
 
 
-
-// header
-#main-wrapper header {
-	height: 230px;
-	width: 100%;
-
-	//.temp(gray);
-}
-#main-wrapper header a {
-	text-decoration: none;
-	color: #aaa;
-}
-#main-wrapper header a img {
-	display: block;
-	margin: 0 auto;
-	position:relative;
-	top: 70px;
-}
-
-#main-wrapper header a:hover {
-	color: @main-blue;
-}
-#main-wrapper header .corner-links {
-	background-color: @main-blue;
-	display: block;
-	margin-left: 20px;
-	width: 40px;
-	height: 99px;
-	float: right;
-}
-#main-wrapper header .mini-nav {
-	margin-top: 31px;
-	float: right;
-	height: 55px;
-	position: relative;
-}
-
-#main-wrapper header .mini-nav form {
-	float: right;
-}
-#main-wrapper header .mini-nav form input {
-	width: 240px;
-	height: 30px;
-	background-color: @main-beige;
-}
-#main-wrapper header .mini-nav form button {
-	//background-color: @main-beige;
-	background: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-#main-wrapper header .mini-nav ul {
-	width: 350px;
-	position: relative;
-	top: 15px;
-	text-transform: uppercase;
-	font-size: 10px;
-	clear: both;
-	text-align: right;
-}
-#main-wrapper header .mini-nav ul li {
-	display: inline-block;
-}
-#main-wrapper header .mini-nav ul li:after {
-	content: '|';
-	margin: 0 11px 0 12px;
-	color: darken(@main-beige, 15%);
-	font-weight: bold;
-}
-#main-wrapper header .mini-nav ul li:last-child:after {
-	margin: 0;
-	content: '';
-}
 
 
 /* main */
@@ -176,20 +110,50 @@ body {
 	float: right;
 	width: @right-column;
 	display: inline-block;
-	.temp(blue);
+	.temp(white);
+}
+#main-wrapper > aside section h1 {
+	.blue-header;
+}
+#main-wrapper > aside form{
+	background-color: @main-blue;
+	width: 240px;
+	height: 31px;
+
+}
+#main-wrapper > aside form input{
+	display: inline-block;
+	background-color: #eee;
+	width: 195px;
+	height: 21px;
+	margin: 5px 0 0 4px;
+}
+#main-wrapper > aside form button{
+	display: inline-block;
+	margin: 0px 0 0 0px;
 }
 /* page footer */
-#main-wrapper > footer {
-	background-image: url('img/footer-bg.png') @main-blue ;
+body > footer {
+	background-image: url('img/footer-bg.jpg');
 	background-repeat: repeat-x;
+	position: relative;
+	bottom: 46px;
+	padding-top: 46px;
+	z-index: -1;
 }
-#main-wrapper > footer section{
+body > footer .footer-wrapper {
+	width: @pagewidth;
+	margin: 0 auto;
+
+}
+body > footer .footer-wrapper section{
 	width: @footer-column;
 	display: inline-block;
 }
-#main-wrapper > footer #footer-stamp{
+body > footer .footer-wrapper #footer-stamp{
 	width: @footer-column;
 }
+
 // credit: http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
 /* For modern browsers */
 .clearfix:before,
