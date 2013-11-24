@@ -4,7 +4,7 @@
 	background-color: @main-beige;
 	margin: 31px 0 0 0;
 	display: inline-block;
-	padding: 23px 20px 44px 20px;
+	padding: 23px 0 44px 0;
 }
 #main > article {
 	margin-bottom: 36px;
@@ -21,6 +21,7 @@
 	float: left;
 
 	padding-right: 15px;
+	padding-left: 20px;
 	margin-top: 57px;
 
 	.article-date {
@@ -29,10 +30,11 @@
 }
 
 #main > article .article-content {
-	float: right;
+	float: left;
 	//width: @left-column - @article-footer-width;
 	width: 540px;
 	padding-left: 22px;
+	padding-right: 20px;
 	border-left: 1px solid darken(@main-beige, 10%);
 	position: relative;
 }
@@ -55,34 +57,58 @@
 	position: relative;
 	padding-top: 35px;
 
+	&:before {
+		content: ' ';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	
+		position: absolute;
+		border-top: 1px solid lighten(@main-beige, 10%);
+	}
+
 	h1 {
 		.blue-header;		
 	}
 
 	article.comment {
-		img, .comment-content, footer {
+		background-color: lighten(@main-beige, 4%);
+
+		img, .comment-content, footer, .sep {
 			display: inline-block;
 		}
+		img {
+			.abs-center;
+		}
+		div.img-wrap {
+			position: relative;
+			display: inline-block;
+			background-image: url('img/commenter-bg.jpg');
+			width: 75px;
+			height: 75px;
+		}
 
-		background-color: lighten(@main-beige, 4%);
+		footer {
+			.name {
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.sep:before {
+				content: '|';
+				font-size: 20px;
+				font-weight: bold;
+				display: inline-block;
+				color: @main-gray;
+			}
+		}
 	}
 
 	.comment.level-2 {
 		background-color: inherit;
 
 	}
-
-}
-
-#main > .comments:before {
-	content: ' ';
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	position: absolute;
-	border-top: 1px solid lighten(@main-beige, 10%);
 }
 
 #main #insert-comment {
@@ -90,14 +116,14 @@
 	position: relative;
 	padding-top: 45px;
 
-}
-#main #insert-comment:before {
-	content: ' ';
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	position: absolute;
-	border-top: 1px solid lighten(@main-beige, 10%);
+	&:before {
+		content: ' ';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	
+		position: absolute;
+		border-top: 1px solid lighten(@main-beige, 10%);
+	}
 }
