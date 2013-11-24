@@ -3,7 +3,8 @@
 	float: right;
 	width: @right-column;
 	display: inline-block;
-	.temp(white);
+	margin-top: 46px;
+
 }
 #main-wrapper > aside section h1 {
 	.blue-header;
@@ -12,35 +13,49 @@
 	background-color: @main-blue;
 	width: 240px;
 	height: 31px;
+	position: relative;
 
+	input {
+		display: inline-block;
+		background-color: #eee;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+
+		width: 195px;
+		height: 21px;
+		//margin: 5px 12px 0 4px;
+	
+	}
+	button{
+		display: inline-block;
+		margin: 0px 0 0 0px;
+		position: relative;
+		top: 7px;
+		right: 6px;
+	}
+
+}
+#main-wrapper #newsletter {
+	text-align: right;
 }
 #main-wrapper > aside #newsletter label {
 	color: @main-blue;
-	text-align: right;
-	justify: right;
-}
-#main-wrapper > aside form input{
-	display: inline-block;
-	background-color: #eee;
-	width: 195px;
-	height: 21px;
-	margin: 5px 12px 0 4px;
-}
-#main-wrapper > aside form button{
-	display: inline-block;
-	margin: 0px 0 0 0px;
-	position: relative;
-	top: 3px;
 }
 
 #main-wrapper > aside section {
 	margin-top: 40px;
 
+	font-size: 0.7em;
+	color: darken(@main-gray, 15%);
 	h1 {
 		margin-bottom: 30px;
 	}
 	div.external-link {
 		border-bottom: 1px solid #ece8e8;
+		margin-bottom: 18px;
+		padding-bottom: 20px;
+
 		h1 {
 			font-family: Tahoma, sans-serif;
 			font-weight: normal;
@@ -48,14 +63,22 @@
 			margin-bottom: 7px;
 		}
 		img {
-			float: left;
 			display: inline-block;
-			position: relative;
+			margin: auto;
+			position: absolute;
+			top: 0;	left: 0; right : 0;	bottom: 0;
+
+			width: 51px;
+			height: 51px;
 		}
 		.img-wrap {
+			position: relative;
+			float: left;
 			width: 61px;
-			height: 60px;
+			height: 61px;
 			background-color: @main-blue;
+			margin-right: 20px;
+
 		}
 	}
 }
