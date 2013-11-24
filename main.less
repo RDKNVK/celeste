@@ -4,6 +4,7 @@
 	background-color: @main-beige;
 	margin: 31px 0 0 0;
 	display: inline-block;
+	padding-top: 23px;
 }
 
 #main > article footer > section,
@@ -16,6 +17,10 @@
 	height: 100%;
 	width: @article-footer-width;
 	float: left;
+
+	.bbox;
+	padding-right: 15px;
+	margin-top: 57px;
 }
 #main > article footer .article-date {
 	.blue-header;
@@ -24,4 +29,38 @@
 #main > article .article-content {
 	float: right;
 	width: @left-column - @article-footer-width;
+	.bbox;
+	padding-left: 22px;
+	border-left: 1px solid darken(@main-beige, 10%);
+	position: relative;
+}
+#main > article .article-content:before {
+	content: ' ';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	position: absolute;
+	border-left: 1px solid lighten(@main-beige, 10%);
+}
+#main > article .article-content h1 {
+	font-size: 20px;
+}
+#main > article .comments {
+	border-top: 1px solid darken(@main-beige, 10%);
+	position: relative;
+}
+#main > article .comments:before {
+	content: ' ';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	position: absolute;
+	border-top: 1px solid lighten(@main-beige, 10%);
+}
+#main > article .comments h1{
+	.blue-header;
 }
