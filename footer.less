@@ -41,5 +41,37 @@ body > footer {
 			left: 2 * @footer-column;
 			background-color: @main-beige;
 		}
+
+		.col-1 {
+
+		}
+		.col-4 {
+			width: 240px;
+			position: relative;
+			label {
+				background-color: #82cad6;
+				width: 60px;
+				height: 25px;
+				display: inline-block;
+				float: left;
+				color: darken(@main-blue, 20%);
+			}
+			input, textarea {
+				display: inline-block;
+				float: right;
+				width: 180px;
+				border: 1px solid #82cad6;
+			}
+			input {
+				height: 25px;
+			}
+			textarea {
+				height: 73px;
+			}
+			button {
+				float: right;
+				clear: both;
+			}
+		}
 	}
 }
