@@ -6,72 +6,118 @@ body > footer {
 	bottom: 46px;
 	padding-top: 46px;
 	z-index: -1;
-	.footer-wrapper {
 
+	.footer-wrapper {
 		width: @pagewidth;
+		height: 420px;
 		margin: 0 auto;
 		
+		hr {
+			height: 2px;
+			width: 100%;
+			background-color: @footer-blue;
+			margin-bottom: 13px;
+		}
 		h1 {
 			color: white;
 			font-size: 20px;
 			font-weight: bold;
 			font-family: "Oswald", sans-serif;
+			margin-bottom: 20px;
 		}
 		h2 {
 			font-size: 1em;
 			color: white;
+			margin-bottom: 4px;
 		}
 		section {
 			width: @footer-column;
 			display: inline-block;
-
+			float: left;
+			margin-top: 35px;
+			margin-right: 20px;
 			a {
 				text-decoration: none;
+				margin-bottom: 20px;
 
 				&:visited, &:link {
 					color: white;
 				}
 			}
+			p {
+				margin-bottom: 15px;
+			}
 		}
-
-		#footer-stamp{
-			width: @footer-column;
-			height: 103px;
-			position: relative;
-			left: 2 * @footer-column;
-			background-color: @main-beige;
+		img {
+			display: inline-block;
+			float: right;
 		}
-
-		.col-1 {
+		.col-1, .col-2, .col-3 {
+		}
+		.col-3 {
+			.img-wrap {
+				width: 220px;
+				height: 204px;
+				background-color: @footer-blue;
+				position: relative;
+			}
+			img {
+				.abs-center;
+			}
 
 		}
 		.col-4 {
 			width: 240px;
 			position: relative;
+			margin-right: 0;
 			label {
-				background-color: #82cad6;
+				background-color: @footer-blue;
 				width: 60px;
 				height: 25px;
 				display: inline-block;
 				float: left;
 				color: darken(@main-blue, 20%);
+				margin-bottom: 16px;
+				text-align: center;
+				padding: 4px;
 			}
 			input, textarea {
 				display: inline-block;
 				float: right;
 				width: 180px;
-				border: 1px solid #82cad6;
+				border: 1px solid @footer-blue;
 			}
 			input {
 				height: 25px;
+				margin-bottom: 16px;
 			}
 			textarea {
 				height: 73px;
+				margin-bottom: 8px;
 			}
 			button {
 				float: right;
 				clear: both;
+				width: 40px;
+				height: 30px;
+				background-color: @footer-blue;
+				position: relative;
+
+				img {
+					.abs-center;
+				}
 			}
+		}
+		#footer-stamp{
+			width: @footer-column;
+			height: 103px;
+			position: absolute;
+			left: 500px;
+			background-color: @main-beige;
+			top: 379px;
+			padding: 28px 20px;
+			font-size: 11px;
+			color: rgba(0,0,0,0.8);
 		}
 	}
 }
