@@ -118,8 +118,12 @@
 #main #insert-comment {
 	border-top: 1px solid darken(@main-beige, 10%);
 	position: relative;
-	padding-top: 45px;
+	padding: 45px 20px;
 
+	h1 {
+		.blue-header(black);
+		margin-bottom: 45px;
+	}
 	&:before {
 		content: ' ';
 		top: 0;
@@ -129,20 +133,39 @@
 	
 		position: absolute;
 		border-top: 1px solid lighten(@main-beige, 10%);
-		//z-index: -1;
+		height: 1px;
 	}
 
 	form {
+		fieldset {
+			display: inline-block;
+			width: @left-column / 2 - 50px;
+			float: left;
+
+		}
+		fieldset:first-child {
+			margin-right: 20px;
+		}
+
 		input, textarea {
 			width: 320px;
-			border: 1px solid darken(@main-beige, 10%);
-			background-color: lighten(@main-beige, 10%);
+			border: 2px solid darken(@main-beige, 10%);
+			background-color: lighten(@main-beige, 5%);
+			display: inline-block;
 		}
 		input {
 			height: 30px;
+			margin-bottom: 23px;
 		}
 		textarea {
 			height: 222px;
+		}
+		input.submit {
+			width: 100px;
+			height: 31px;
+			background-color: darken(@main-beige, 10%);
+			color: white;
+			float: right;
 		}
 	}
 
