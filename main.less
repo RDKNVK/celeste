@@ -5,10 +5,23 @@
 	margin: 31px 0 0 0;
 	display: inline-block;
 	padding: 23px 0 44px 0;
-	
+	position: relative;
+
+	&:after {
+		content: ' ';
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: @left-column;
+		height: 45px;
+		background-color: @main-beige;
+		z-index: 3;
+	}
 }
+
 #main >	article {
-		margin-bottom: 36px;
+	margin-bottom: 36px;
+
 	footer > section,
 	footer > div,
 	footer > span {
@@ -160,7 +173,7 @@
 #main #insert-comment {
 	border-top: 1px solid darken(@main-beige, 10%);
 	position: relative;
-	padding: 45px 20px;
+	padding: 45px 20px 0 20px;
 
 	h1 {
 		.blue-header(black);
@@ -183,7 +196,7 @@
 			display: inline-block;
 			width: @left-column / 2 - 50px;
 			float: left;
-
+			height: 240px;
 		}
 		fieldset:first-child {
 			margin-right: 20px;
