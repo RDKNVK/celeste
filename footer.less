@@ -21,9 +21,17 @@ body > footer {
 			font-size: 1em;
 			color: white;
 		}
-		section{
+		section {
 			width: @footer-column;
 			display: inline-block;
+
+			a {
+				text-decoration: none;
+
+				&:visited, &:link {
+					color: white;
+				}
+			}
 		}
 
 		#footer-stamp{
