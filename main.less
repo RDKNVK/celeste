@@ -9,13 +9,14 @@
 
 	&:after {
 		content: ' ';
-		position: relative;
+		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: @left-column;
-		height: 45px;
+		height: 46px;
 		background-color: @main-beige;
 		z-index: 3;
+		display: inline-block;
 	}
 }
 
@@ -133,10 +134,13 @@
 			background-image: url('img/commenter-bg.jpg');
 			width: 75px;
 			height: 75px;
+			margin-right: 25px;
 		}
 		.comment-content {
 			float: left;
+			width: 440px
 		}
+
 		footer {
 			float: left;
 			.name {
@@ -167,6 +171,10 @@
 	article.comment.level-2 {
 		background-color: inherit;
 		padding-left: 130px;
+
+		.comment-content{
+			width: 440px
+		}
 	}
 }
 
