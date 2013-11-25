@@ -76,7 +76,7 @@
 	border-top: 1px solid darken(@main-beige, 10%);
 	position: relative;
 	padding-top: 35px;
-
+	padding-bottom: 20px;
 	&:before {
 		content: ' ';
 		top: 0;
@@ -91,11 +91,21 @@
 	}
 
 	h1 {
-		.blue-header;		
+		.blue-header;
+		margin-bottom: 20px;
+		margin-left: 20px;
+		i {
+			background-image: url('img/flecha.png');
+			width: 17px;
+			height: 17px;
+			display: inline-block;
+			margin-right: 5px;
+		}
 	}
 
 	article.comment {
 		background-color: lighten(@main-beige, 4%);
+		padding: 20px 20px 20px 40px;
 
 		img, .comment-content, footer, .sep {
 			display: inline-block;
@@ -104,31 +114,46 @@
 			.abs-center;
 		}
 		div.img-wrap {
+			float: left;
 			position: relative;
 			display: inline-block;
 			background-image: url('img/commenter-bg.jpg');
 			width: 75px;
 			height: 75px;
 		}
-
+		.comment-content {
+			float: left;
+		}
 		footer {
+			float: left;
 			.name {
 				font-size: 20px;
 				font-weight: bold;
 			}
-
+			.date {
+				font-size: 1.1em;
+				color: @main-gray;
+			}
 			.sep:before {
 				content: '|';
 				font-size: 20px;
 				font-weight: bold;
 				display: inline-block;
 				color: @main-gray;
+				margin: 0 8px;
+			}
+			a.reply {
+				text-decoration: none;
+				color: @main-blue;
+				font-size: 1.2em;
+
 			}
 		}
 	}
 
-	.comment.level-2 {
+	article.comment.level-2 {
 		background-color: inherit;
+		padding-left: 130px;
 	}
 }
 
