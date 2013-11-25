@@ -121,10 +121,10 @@
 			<h1>Deja un comentario</h1>
 
 			<form action="insert-comment.php">
-				<label>Nombre: <input type="text" name="name"></label>
-				<label>E-mail: <input type="email" name="email"></label>
-				<label>Web Site <input type="url" name="website"></label>
-				<label>Mesanje: <textarea name="message"></textarea></label>
+				<label for="text" >Nombre: </label><input id="text" type="text" name="name">
+				<label for="email" >E-mail: </label><input id="email" type="email" name="email">
+				<label for="url" >Web Site</label> <input id="url" type="url" name="website">
+				<label for="message" >Mesanje:</label> <textarea id="message" name="message"></textarea>
 				<input type="submit" value="ENVIAR">
 			</form>
 		</div>

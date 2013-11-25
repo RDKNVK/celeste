@@ -6,20 +6,32 @@ body > footer {
 	bottom: 46px;
 	padding-top: 46px;
 	z-index: -1;
-}
-body > footer .footer-wrapper {
-	width: @pagewidth;
-	margin: 0 auto;
+	.footer-wrapper {
 
-}
-body > footer .footer-wrapper section{
-	width: @footer-column;
-	display: inline-block;
-}
-body > footer .footer-wrapper #footer-stamp{
-	width: @footer-column;
-	height: 103px;
-	position: relative;
-	left: 2 * @footer-column;
-	background-color: @main-beige;
+		width: @pagewidth;
+		margin: 0 auto;
+		
+		h1 {
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+			font-family: "Oswald", sans-serif;
+		}
+		h2 {
+			font-size: 1em;
+			color: white;
+		}
+		section{
+			width: @footer-column;
+			display: inline-block;
+		}
+
+		#footer-stamp{
+			width: @footer-column;
+			height: 103px;
+			position: relative;
+			left: 2 * @footer-column;
+			background-color: @main-beige;
+		}
+	}
 }
