@@ -1,0 +1,71 @@
+#main-wrapper header {
+	height: 230px;
+	width: 100%;
+
+}
+#main-wrapper header a {
+	text-decoration: none;
+	color: #aaa;
+}
+#main-wrapper header a img {
+	display: block;
+	margin: 0 auto;
+	position:relative;
+	top: 70px;
+}
+
+#main-wrapper header a:hover {
+	color: @main-blue;
+}
+#main-wrapper header .corner-links {
+	background-color: @main-blue;
+	display: block;
+	margin-left: 20px;
+	width: 40px;
+	height: 99px;
+	float: right;
+}
+#main-wrapper header .mini-nav {
+	margin-top: 31px;
+	float: right;
+	height: 55px;
+	position: relative;
+}
+
+#main-wrapper header .mini-nav form {
+	float: right;
+}
+#main-wrapper header .mini-nav form input {
+	width: 240px;
+	height: 30px;
+	background-color: @main-beige;
+}
+#main-wrapper header .mini-nav form button {
+	//background-color: @main-beige;
+	background: none;
+	position: absolute;
+	top: 3px;
+	right: 2px;
+}
+#main-wrapper header .mini-nav ul {
+	width: 350px;
+	position: relative;
+	top: 15px;
+	text-transform: uppercase;
+	font-size: 10px;
+	clear: both;
+	text-align: right;
+}
+#main-wrapper header .mini-nav ul li {
+	display: inline-block;
+}
+#main-wrapper header .mini-nav ul li:after {
+	content: '|';
+	margin: 0 11px 0 12px;
+	color: darken(@main-beige, 15%);
+	font-weight: bold;
+}
+#main-wrapper header .mini-nav ul li:last-child:after {
+	margin: 0;
+	content: '';
+}

@@ -1,0 +1,81 @@
+@body-color: white;
+@main-beige: #ebe4de;
+@main-blue: #44afc2;
+@main-gray: #aaacaf;
+@footer-blue: #82cad6;
+
+@pagewidth: 960px;
+@left-column: 700px;
+@right-column: 240px;
+
+@footer-column: 220px;
+@contact-form: 240px;
+
+@article-footer-width: 120px;
+
+.blue-header (@c: @main-blue) {
+	color: darken(@c, 10%);
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Oswald", sans-serif;
+}
+.bbox {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */	
+}
+.abs-center {
+	margin: auto;
+	position: absolute;
+	top: 0;	left: 0; right : 0;	bottom: 0;
+}
+// reset
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style-type: none;
+	background: none;
+}
+a {
+	text-decoration: none;
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+body {
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	background-color: @body-color;
+}
+
+#main-wrapper {
+	width: @pagewidth;
+	margin: 0 auto;
+}
+
+// credit: http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
+
+*:focus {
+	outline: none;
+	box-shadow: 0 0 2px black;
+}
+@import 'header.less';
+@import "footer.less";
+@import "sidebar.less";
+@import "main.less";
+@import "nav.less";

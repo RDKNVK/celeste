@@ -1,0 +1,144 @@
+/* side panel */
+#main-wrapper > aside {
+	float: right;
+	width: @right-column;
+	display: inline-block;
+	margin-top: 46px;
+
+
+	.tagcloud-1 {
+		color: @main-gray;
+		font-size: 12px;
+	}
+	.tagcloud-2 {
+		font-size: 14px;
+		color: gray;
+	}
+	.tagcloud-3 {
+		color: @footer-blue;
+		font-size: 16px;
+	}
+	.tagcloud-4 {
+		color: darken(@main-blue, 10%);
+		font-size: 18px;
+	}
+	
+	section h1 {
+		.blue-header;
+	}
+	form {
+		background-color: @main-blue;
+		width: 240px;
+		height: 31px;
+		position: relative;
+	
+	
+		input {
+			display: inline-block;
+			background-color: #eee;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+	
+			width: 195px;
+			height: 21px;
+			//margin: 5px 12px 0 4px;
+		
+		}
+		button{
+			display: inline-block;
+			margin: 0px 0 0 0px;
+			position: relative;
+			top: 7px;
+			right: 6px;
+		}
+	
+	}
+	section {
+		margin-top: 40px;
+	
+		font-size: 0.7em;
+		color: darken(@main-gray, 15%);
+		h1 {
+			margin-bottom: 30px;
+		}
+		div.external-link {
+			border-bottom: 1px solid #ece8e8;
+			margin-bottom: 18px;
+			padding-bottom: 20px;
+	
+			h1 {
+				font-family: Tahoma, sans-serif;
+				font-weight: normal;
+				font-size: 13px;
+				margin-bottom: 7px;
+			}
+			img {
+				display: inline-block;
+				-webkit-box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				box-sizing: content-box;
+				//.abs-center;
+				border: 7px solid @main-blue;
+				width: 51px;
+				height: 51px;
+				float: left;
+				margin-right: 20px;
+			}
+			p {
+			}
+		}
+	}
+	.flickr {
+		img {
+			width: 50px;
+			height: 50px;
+
+			display: inline-block;
+			border: 3px solid @main-blue;
+			margin-bottom: 9px;
+			margin: 2px 2px;
+		}
+
+	}
+	#newsletter {
+		text-align: right;
+	}
+	#newsletter label {
+		color: @main-blue;
+		font-weight: bold;
+	}
+}
+
+
+.ph-ad {
+	position: relative;
+	background: #e7e7e7;
+	margin-bottom: 6px;
+	width: 117px;
+	height: 117px;
+	
+	display:inline-block;
+	border: 1px solid #cfcfcf;
+
+
+	.inner {
+	position: relative; 
+	text-align: center;
+	top: 40px;
+	color: #6c6c6c;
+	font-weight: bold;
+	font-size: 12px;
+	
+	
+	}
+	.white {
+	color: white;
+	font-size: 17px;
+	position: relative;
+	}
+
+	&:nth-child(odd) {
+		margin-left: 3px;
+	}
+}

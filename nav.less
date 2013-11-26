@@ -1,0 +1,34 @@
+
+#main-wrapper nav {
+	width: @left-column;
+	height: 41px;
+
+	//.temp (navy);
+}
+#main-wrapper nav a {
+	text-decoration: none;
+	color: none;
+	display: inline-block;
+	
+	height: 41px;
+	border-right: 5px solid lighten(@main-gray, 20%);
+	padding:0 17px 0 0;
+
+}
+#main-wrapper nav a:not(:first-child) {
+	margin-left: 20px;
+	
+}
+#main-wrapper nav a:last-child  {
+	border: none;
+	margin-right: 0;
+	padding: 0;
+}
+
+#main-wrapper nav dt{
+	.blue-header;
+}
+#main-wrapper nav dd{
+	color: @main-gray;
+	font-size: 10px;
+}
